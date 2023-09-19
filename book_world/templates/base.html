@@ -1,0 +1,210 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+{% block head %}
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel='stylesheet' href="{% static 'css/index.css' %}">
+		<script src="{% static 'js/index.js' %}"></script>
+		
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        <li id="login"><a href="#login">Login</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+    <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <marquee class="marquee" BEHAVIOR="alternate"> >
+
+          <h1>Book Planet<span>&emsp;~&emsp;Digital Library&emsp;~</span>&nbsp;&emsp;Read Unlimited</h1>
+        </marquee>
+      </a>
+  </header>
+</head>
+  {% endblock %}
+
+{% block title%}
+	<title></title>
+{% endblock %}
+{% block content %}
+	<body>
+
+	</body>
+{% endblock %}
+
+{% block hero %}
+   <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+    <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+          <h2 id="welcome">Welcome to  <span>Book Planet</span></h2>
+          <p>&emsp;Where the world's knowledge is at your fingertips. We are a dedicated team of educators, scholars, and technology enthusiasts who have come together to create a digital oasis of learning and exploration.</p>
+          <br><br><br>
+
+
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#about" class="btn-get-started">Get Started</a>
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src={% static 'images/hero-img.svg' %} class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-boxes position-relative">
+      <div class="container position-relative">
+        <div class="row gy-4 mt-5">
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-easel"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Coding Books</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-gem"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Blog Articles</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-geo-alt"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Stories</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-command"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Latest Content</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+  <!-- End Hero Section -->
+{% endblock %}
+{% block aboutus %}
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>About Us</h2>
+          <p>Welcome to Planet Book, your gateway to a world of knowledge and exploration. We are passionate about making education and information accessible to everyone, and that's why we've created this free digital library for students, scholars, and knowledge seekers worldwide.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <h3>Our Commitment --- Free Access --- Diverse Content --- Quality and Curation</h3>
+            <p>Greetings from the Codiatic team! We are a passionate group of educators, developers, and lifelong learners dedicated to the pursuit of knowledge and the democratization of education. Together, we've embarked on a mission to transform the educational landscape by creating an innovative digital library designed with students and knowledge seekers in mind.
+
+</p>
+<h3>Our Journey</h3>
+<p>
+Our journey began with a shared vision: to break down the barriers that often hinder access to quality educational resources. Recognizing the power of technology, we set out to harness it for a greater purpose. With years of combined experience in education and software development, we formed Codiatic, a team committed to making a positive impact on the world of learning.
+</p>
+<h3>Our Digital Library</h3>
+
+<p>
+Introducing our brainchild, BOOK PLANET. It's not just a library; it's a labor of love. We've poured our expertise and dedication into curating a digital haven where learning knows no bounds. Here's what you can expect:
+<br>
+    <h4>Diverse Content:</h4> Our library boasts an expansive collection of materials, spanning a myriad of subjects, disciplines, and interests. From textbooks and academic articles to thought-provoking blogs, we've left no stone unturned.
+<br>
+    <h4>User-Centric Design:</h4> As educators, we understand the importance of an intuitive and user-friendly platform. We've meticulously crafted BOOK PLANET to ensure that you have a seamless and enjoyable learning experience.
+<br>
+    <h4>Innovation:</h4> Education is an ever-evolving field, and we're committed to staying at its forefront. Expect regular updates, new features, and cutting-edge resources as we continue to innovate and enhance your learning journey.
+</p>
+
+<h3>Why Codiatic?</h3>
+
+    <h4>Educator's Insight:</h4> Our team includes experienced educators who understand the needs of students and teachers alike. This insight informs everything we do, from content selection to platform design.
+
+    <h4>Tech Pioneers:</h4> We're not just educators; we're tech enthusiasts too. Our developers are at the forefront of technology trends, ensuring that BOOK PLANET remains a modern and reliable resource.
+
+    <h4>Global Impact:</h4> Our dream is to impact learners worldwide. We're here to support individuals, schools, and institutions in their quest for knowledge, no matter where they are.
+
+
+          </div>
+          <div class="col-lg-6">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                Thank you for choosing BOOK PLANET as your educational companion. Together, we can redefine the way education is accessed and experienced. Join us on this exciting journey, and let's create a brighter future through knowledge.
+              </p>
+              <ul>
+
+              <div class="position-relative mt-4">
+                <img src="{% static 'images/about-2.jpg' %}" class="img-fluid rounded-4" alt="">
+                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+              </div>
+            </div>
+          <img src="{% static 'images/about.jpg' %}" class="img-fluid rounded-4 mb-4"alt="Read Unlimited">
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+{% endblock %}
+{% block footer %}
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter">Twitter<i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook">Facebook<i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram">Instagram<i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin">Linkedin<i class="bi bi-linkedin"></i></i></a>
+      </div>
+      <section id="contact" class="contact">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+      </div>
+
+    </div>
+  </section><!-- End Top Bar -->
+{% endblock %}
+</html>
