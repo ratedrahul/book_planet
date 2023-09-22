@@ -5,3 +5,8 @@
 __pycache__
 db.sqlite3
 media
+media/
+book_world/__pycache__
+__pycache__/
+*.sqlite3
+

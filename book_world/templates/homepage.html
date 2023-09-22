@@ -1,1 +1,50 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block book_section%}
+  
+  {% if book_list %}
+    {% for book in book_list %}
+      <a href={{book}}>{{book}}</a>
+      <br>
+    {% endfor %}
+  {% endif%}
+  <section id="book_category" class="book_category">
+    <div class="icon-boxes position-relative">
+      <div class="container position-relative">
+        <div class="row gy-4 mt-5">
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-easel"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Coding Books</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-gem"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Blog Articles</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-geo-alt"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Stories</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-command"></i></div>
+              <h4 class="title"><a href='{% url "upload_to" %}' class="stretched-link">Upload Content</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+  
