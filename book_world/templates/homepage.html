@@ -3,12 +3,22 @@
 
 {% block book_section%}
   
-  {% if book_list %}
-    {% for book in book_list %}
-      <a href={{book}}>{{book}}</a>
-      <br>
-    {% endfor %}
-  {% endif%}
+
+  <ul class="list-group">
+  <li class="list-group-item list-group-item-primary">All Books</a></li>
+  <li class="list-group-item list-group-item-secondary"><a href="{% url 'coding_books'%}">Coding Book</a></li>
+  <li class="list-group-item list-group-item-danger">Science Book</li>
+  <li class="list-group-item list-group-item-success">Blog Articles</li>
+  <li class="list-group-item list-group-item-warning">Stories</li>
+  <li class="list-group-item list-group-item-info">A simple info list group item
+      <!-- <span class="badge badge-primary badge-pill">1</span></li> -->
+  <li class="list-group-item list-group-item-light">A simple light list group item</li>
+  <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+</ul>
+
+
+
+
   <section id="book_category" class="book_category">
     <div class="icon-boxes position-relative">
       <div class="container position-relative">
@@ -17,7 +27,7 @@
           <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-easel"></i></div>
-              <h4 class="title"><a href="" class="stretched-link">Coding Books</a></h4>
+              <h4 class="title"><a href="{% url 'coding_books'%}"class="stretched-link">Coding Books</a></h4>
             </div>
           </div><!--End Icon Box -->
 
@@ -46,5 +56,11 @@
       </div>
     </div>
   </section>
+  {% if book_list %}
+    {% for book in book_list %}
+      <a href={{book}}>{{book}}</a>
+      <br>
+    {% endfor %}
+  {% endif%}
   {% endblock %}
   

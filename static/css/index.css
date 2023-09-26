@@ -2696,4 +2696,10 @@ body {
 /*body{*/
 /*    background-image: url('{% static "images/kur.jpg" %}');*/
 /*}*/
-/*  background-image: url('/home/developer/Downloads/lib.jpg') !important;*/*/
+/*  background-image: url('/home/developer/Downloads/lib.jpg') !important;*/
+
+
+
+.list-group{
+  text-align: center !important;
+}

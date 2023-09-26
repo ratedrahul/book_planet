@@ -1,12 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 # from django.contrib.auth.forms import UserCreationForm
 # from django.contrib.auth.views import LoginView
-
 import os
 from django.conf import settings
-
-
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect
@@ -14,8 +10,8 @@ from .forms import RegistrationForm,LoginForm,BookUploadForm
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import messages
 from .models import *
-# Create your views here.
 
+# Create your views here.
 def view_pdf(request, pdf_filename):
 	try:
 		pdf_filename = 'book_collection/'+pdf_filename
@@ -81,9 +77,7 @@ def login(request):
 
 
 def homepage(request):
-	book_list = BookStore.objects.all()
-	return render(request,'homepage.html',{'book_list':book_list})
-
+	return render(request,'homepage.html')
 
 def index(request):
 	return render(request,'index.html')
@@ -91,6 +85,18 @@ def index(request):
 
 def blog(request):
 	return render(request,'blog.html')
+
+
+def coding_books(request):
+	data = Book.objects.filter(category__category__contains='coding')
+	data_liss = []
+
+	for file in data:
+		context_data = {}
+		context_data['url'] = str(file.storage_path.book_storage)
+		context_data['title'] = file.title
+		data_liss.append(context_data)
+	return render(request,'coding_books.html',{'data':data_liss})
 
 
 # def register(request):
@@ -108,8 +114,6 @@ def blog(request):
 # class RegistrationView(CreateView):
 # 	form = UserCreationForm()
 # 	template_name = 'register.html'
-
-
 
 
 # def login(request):

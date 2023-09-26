@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block welcome_content %}
+	{% for book in data %}
+		<br><h4><ul>
+			<a href="{% url 'view_pdf' book.url|cut:'book_collection/' %}"  target="_new">{{book.title}} </a><br>
+		</ul></h4>
+	{% endfor %}
+{% endblock %}
+{% block aboutus %}
+{% endblock %}
+{% block footer %}
+{% endblock %}
